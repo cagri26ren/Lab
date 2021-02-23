@@ -18,5 +18,18 @@ public class StudentSearch {
                 
         throw new Exception("There is no student with the given name!");
     }
+    public ArrayList<Student> findAll(ArrayList<Student> students, String name) throws Exception {
+        // I am adding random comments lol
+        ArrayList<Student> result = new ArrayList<Student>();
+        for (Student student: students)
+            if (student.getName().equals(name)) {
+                result.add(student);
+            }
+        if (result.isEmpty()) {
+            throw new Exception("There is no student with the given name!");
+        }
+        return result;
+        // This line also gets a random comment
+    }
 
 }
